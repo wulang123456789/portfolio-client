@@ -19,7 +19,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-6xl md:text-8xl font-bold mb-6"
+          className="text-4xl md:text-7xl font-bold mb-6"
         >
           Hi, I'm <span className="text-purple-400">浪浪锵锵</span>
         </motion.h1>
