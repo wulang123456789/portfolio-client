@@ -37,8 +37,9 @@ export default function About() {
 
           <div className="flex gap-4">
             
-             <a href="#"
-              className="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-full text-sm transition"
+             <a href="/resume.pdf"
+             download="伍浪-简历.pdf"
+              className="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-full text-sm transition text-white"
             >
               下载简历
             </a>

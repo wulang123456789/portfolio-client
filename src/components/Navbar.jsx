@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className="hidden md:flex gap-6 text-sm">
           <Link to="/" className="hover:text-purple-400 transition">主页</Link>
           <Link to="/about" className="hover:text-purple-400 transition">关于</Link>
-          <Link to="/portfolio" className="hover:text-purple-400 transition">Portfolio</Link>
+          <Link to="/portfolio" className="hover:text-purple-400 transition">作品集</Link>
           <Link to="/blog" className="hover:text-purple-400 transition">博客</Link>
           <Link to="/contact" className="hover:text-purple-400 transition">联系我</Link>
         </div>
