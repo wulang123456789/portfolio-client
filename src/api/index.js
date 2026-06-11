@@ -1,17 +1,15 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://portfolio-server-production-2f7b.up.railway.app/api',
 });
 
-// 请求拦截器：自动加 token
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
 
-// 响应拦截器：token 过期自动跳登录
 api.interceptors.response.use(
   (response) => response,
   (error) => {
