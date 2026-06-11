@@ -12,7 +12,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="text-purple-400 tracking-widest text-sm mb-4 uppercase"
         >
-          Welcome to my portfolio
+         欢迎浏览我的作品集
         </motion.p>
 
         <motion.h1
@@ -43,13 +43,13 @@ export default function Home() {
             to="/portfolio"
             className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full transition font-medium"
           >
-            View My Work
+            查看我的作品
           </Link>
           <Link
             to="/contact"
             className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full transition font-medium"
           >
-            Contact Me
+            联系我
           </Link>
         </motion.div>
       </div>
