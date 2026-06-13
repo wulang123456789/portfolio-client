@@ -15,7 +15,7 @@ export default function Home() {
       <div className="min-h-screen flex flex-col md:flex-row items-center pt-20 md:pt-0">
 
         {/* 左侧：文字 */}
-        <div className="flex-1 flex flex-col items-start justify-center text-left px-6 md:px-16 order-2 md:order-1">
+        <div className="flex-1 flex flex-col items-center md:items-start justify-center text-center md:text-left px-6 md:px-20 order-2 md:order-1">
           <motion.p
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
