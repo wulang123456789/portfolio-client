@@ -12,6 +12,7 @@ import AdminPosts from './admin/AdminPosts';
 import AdminProjects from './admin/AdminProjects';
 import AdminMessages from './admin/AdminMessages';
 import PrivateRoute from './admin/PrivateRoute';
+import AdminSettings from './admin/AdminSettings';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="posts" element={<AdminPosts />} />
           <Route path="projects" element={<AdminProjects />} />
           <Route path="messages" element={<AdminMessages />} />
+          <Route path="settings" element={<AdminSettings />} />
         </Route>
       </Routes>
     </BrowserRouter>

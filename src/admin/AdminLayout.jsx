@@ -25,6 +25,10 @@ export default function AdminLayout() {
           className="px-4 py-2 rounded-lg hover:bg-gray-800 transition text-gray-300 hover:text-white">
           💬 留言管理
         </Link>
+        <Link to="/admin/settings"
+          className="px-4 py-2 rounded-lg hover:bg-gray-800 transition text-gray-300 hover:text-white">
+          ⚙️ 网站设置
+       </Link>
         <div className="mt-auto">
           <button
             onClick={logout}

@@ -1,10 +1,17 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import api from '../api/index';
 
 export default function Home() {
+  const [settings, setSettings] = useState({});
+
+  useEffect(() => {
+    api.get('/settings').then(res => setSettings(res.data)).catch(() => {});
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-      {/* Hero 区域 */}
       <div className="min-h-screen flex flex-col md:flex-row items-center pt-20 md:pt-0">
 
         {/* 左侧：文字 */}
@@ -15,7 +22,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="text-purple-400 tracking-widest text-sm mb-4 uppercase"
           >
-            欢迎浏览我的作品集
+            {settings.hero_tagline || '欢迎浏览我的作品集'}
           </motion.p>
 
           <motion.h1
@@ -24,7 +31,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            Hi, I'm <span className="text-purple-400">浪浪锵锵</span>
+            {settings.hero_title || "Hi, I'm 浪浪锵锵"}
           </motion.h1>
 
           <motion.p
@@ -33,7 +40,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-gray-400 text-lg md:text-2xl mb-10 max-w-xl"
           >
-            Full Stack Developer & Creative Thinker
+            {settings.hero_subtitle || 'Full Stack Developer & Creative Thinker'}
           </motion.p>
 
           <motion.div
@@ -65,7 +72,7 @@ export default function Home() {
           className="flex-1 w-full md:h-screen order-1 md:order-2"
         >
           <img
-            src="/profile.jpg"
+            src={settings.hero_image || '/profile.jpg'}
             alt="个人照片"
             className="w-full h-64 md:h-full object-cover"
           />
