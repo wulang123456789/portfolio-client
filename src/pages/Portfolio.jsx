@@ -27,7 +27,7 @@ export default function Portfolio() {
       {loading ? (
         <p className="text-center text-gray-500">加载中...</p>
       ) : projects.length === 0 ? (
-        <p className="text-center text-gray-500">暂无作品，请在后台添加。</p>
+        <p className="text-center text-gray-500">暂无作品，尽情期待</p>
       ) : (
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, i) => (
